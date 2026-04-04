@@ -45,14 +45,16 @@ const HeroSection = () => {
             Daily motivation, legal lifestyle products, and support for law students, bar candidates, attorneys, and institutions.
           </p>
 
-          <div className="flex flex-wrap gap-3">
+          <div className="flex flex-wrap gap-3 sm:flex-nowrap sm:items-center">
             <Link to="/sms">
               <Button variant="hero" size="lg">
                 Join Daily Motivation <ArrowRight className="h-4 w-4" />
               </Button>
             </Link>
             <a href="sms:+17173666462&body=LAW">
-              <Button variant="heroOutline" size="lg">Get Free Sample</Button>
+              <Button variant="heroOutline" size="lg">
+                Get Free Sample <ArrowRight className="h-4 w-4" />
+              </Button>
             </a>
             <Link to="/shop">
               <Button variant="gold" size="lg">
