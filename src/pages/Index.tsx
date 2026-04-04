@@ -9,6 +9,8 @@ import Testimonials from "@/components/Testimonials";
 import SmsCta from "@/components/SmsCta";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
+import StickyCtaBar from "@/components/StickyCtaBar";
+import GiftBanner from "@/components/GiftBanner";
 
 const Index = () => {
   return (
@@ -18,12 +20,16 @@ const Index = () => {
       <FeaturedProducts />
       <HowItWorks />
       <PricingSection />
+      <GiftBanner />
       <WhyLoveLaw />
       <LifestyleSection />
       <Testimonials />
       <SmsCta />
       <ContactSection />
-      <Footer />
+      <div className="pb-16">
+        <Footer />
+      </div>
+      <StickyCtaBar />
     </div>
   );
 };

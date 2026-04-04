@@ -1,12 +1,12 @@
 import { Button } from "@/components/ui/button";
-import { Smartphone } from "lucide-react";
+import { Smartphone, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const SmsCta = () => {
   return (
     <section className="py-24 relative overflow-hidden">
-      {/* Glow background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-background to-secondary/10" />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/10 rounded-full blur-[150px]" />
+      <div className="absolute inset-0 bg-gradient-to-br from-secondary/5 via-background to-accent/5" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-secondary/5 rounded-full blur-[150px]" />
 
       <div className="container mx-auto px-4 relative z-10 text-center max-w-2xl">
         <div className="inline-flex items-center gap-2 mb-6">
@@ -14,7 +14,7 @@ const SmsCta = () => {
           <span className="text-sm font-semibold text-accent">SMS Motivation</span>
         </div>
 
-        <h2 className="text-3xl lg:text-5xl font-bold font-heading mb-4">
+        <h2 className="text-3xl lg:text-5xl font-bold font-heading text-foreground mb-4">
           Get Daily Doses of{" "}
           <span className="text-gradient-gold">Justice™</span>
         </h2>
@@ -30,8 +30,8 @@ const SmsCta = () => {
         </div>
 
         <div className="flex justify-center gap-4 flex-wrap">
-          <Button variant="hero" size="lg">Join Now</Button>
-          <Button variant="heroOutline" size="lg">Get Sample Message</Button>
+          <Link to="/sms"><Button variant="hero" size="lg">Join Now <ArrowRight className="h-4 w-4" /></Button></Link>
+          <a href="sms:+17173666462&body=LAW"><Button variant="gold" size="lg">Get Sample Message</Button></a>
         </div>
       </div>
     </section>
