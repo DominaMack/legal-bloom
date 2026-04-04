@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, ShoppingBag } from "lucide-react";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import iphoneMockup from "@/assets/iphone-mockup.png";
@@ -36,27 +36,29 @@ const HeroSection = () => {
           </div>
 
           <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-[3.25rem] font-bold font-heading leading-[1.1] text-foreground">
-            Law School Is Hard.{" "}
+            From 1L to Esq. —{" "}
             <br className="hidden sm:block" />
-            Burnout Is Real.{" "}
-            <br className="hidden sm:block" />
-            <span className="text-gradient">We Keep You Going.</span>
+            <span className="text-gradient">Stay Motivated Every Step.</span>
           </h1>
 
           <p className="text-base text-muted-foreground leading-relaxed max-w-md">
-            Daily motivation, mindset support, and legal inspiration delivered
-            directly to your phone.
+            Daily motivation, legal lifestyle products, and support for law students, bar candidates, attorneys, and institutions.
           </p>
 
           <div className="flex flex-wrap gap-3">
             <Link to="/sms">
               <Button variant="hero" size="lg">
-                Get Daily Motivation <ArrowRight className="h-4 w-4" />
+                Join Daily Motivation <ArrowRight className="h-4 w-4" />
               </Button>
             </Link>
             <a href="sms:+17173666462&body=LAW">
-              <Button variant="heroOutline" size="lg">Get Sample Message</Button>
+              <Button variant="heroOutline" size="lg">Get Free Sample</Button>
             </a>
+            <Link to="/shop">
+              <Button variant="gold" size="lg">
+                <ShoppingBag className="h-4 w-4" /> Shop Merch
+              </Button>
+            </Link>
           </div>
 
           {/* SMS Box */}
