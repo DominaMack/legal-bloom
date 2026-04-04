@@ -68,7 +68,7 @@ const PricingSection = () => {
           {plans.map((plan) => (
             <div
               key={plan.title}
-              className={`card-glow rounded-2xl border p-8 flex flex-col ${
+              className={`card-glow rounded-2xl border p-8 flex flex-col text-center ${
                 plan.popular
                   ? "border-secondary/50 bg-secondary/5 scale-105 relative shadow-lg"
                   : "border-border bg-card"
@@ -79,7 +79,7 @@ const PricingSection = () => {
                   Most Popular
                 </div>
               )}
-              <div className="flex items-center gap-3 mb-4">
+              <div className="flex items-center justify-center gap-3 mb-4">
                 <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-secondary/10 text-secondary">
                   <plan.icon className="h-5 w-5" />
                 </div>
@@ -90,7 +90,7 @@ const PricingSection = () => {
                 <p className="text-3xl font-bold font-heading text-foreground">
                   {plan.monthly}<span className="text-sm font-normal text-muted-foreground">/mo</span>
                 </p>
-                <div className="flex gap-3 mt-2 text-xs text-muted-foreground">
+                <div className="flex justify-center gap-3 mt-2 text-xs text-muted-foreground">
                   <span>{plan.quarterly} / 90-day</span>
                   <span>•</span>
                   <span>{plan.annual} / year</span>
@@ -99,7 +99,7 @@ const PricingSection = () => {
 
               <ul className="space-y-3 mb-8 flex-1">
                 {plan.features.map((f) => (
-                  <li key={f} className="flex items-center gap-2 text-sm text-muted-foreground">
+                  <li key={f} className="flex items-center justify-center gap-2 text-sm text-muted-foreground">
                     <Check className="h-4 w-4 text-secondary flex-shrink-0" />
                     {f}
                   </li>

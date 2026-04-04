@@ -14,7 +14,6 @@ const mainLinks = [
 ];
 
 const moreLinks = [
-  { label: "The Real Dispute™", href: "/real-dispute" },
   { label: "Research", href: "/research" },
   { label: "Contact", href: "/contact" },
 ];

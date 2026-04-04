@@ -1,16 +1,24 @@
 import { ExternalLink } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import studyMug from "@/assets/products/study-mug.jpg";
+import barPrepHoodie from "@/assets/products/bar-prep-hoodie.jpg";
+import notebook from "@/assets/products/notebook.jpg";
+import toteBag from "@/assets/products/tote-bag.jpg";
+import candle from "@/assets/products/candle.jpg";
+import wallArt from "@/assets/products/wall-art.jpg";
+import tumbler from "@/assets/products/tumbler.jpg";
+import stickerPack from "@/assets/products/sticker-pack.jpg";
 
 const products = [
-  { name: "Study Mug", price: "$18.99", img: "https://i.etsystatic.com/44229498/r/il/04a0c8/5746050430/il_680x540.5746050430_jcxf.jpg" },
-  { name: "Bar Prep Hoodie", price: "$44.99", img: "https://i.etsystatic.com/44229498/r/il/5e90e3/5793821375/il_680x540.5793821375_1a2k.jpg" },
-  { name: "Notebook", price: "$14.99", img: "https://i.etsystatic.com/44229498/r/il/df79a9/5698298280/il_680x540.5698298280_h07m.jpg" },
-  { name: "Tote Bag", price: "$22.99", img: "https://i.etsystatic.com/44229498/r/il/5c1ee3/5793821387/il_680x540.5793821387_cnkj.jpg" },
-  { name: "Candle", price: "$19.99", img: "https://i.etsystatic.com/44229498/r/il/b94e81/5698298284/il_680x540.5698298284_c1h1.jpg" },
-  { name: "Wall Art", price: "$29.99", img: "https://i.etsystatic.com/44229498/r/il/0e87f2/5746050468/il_680x540.5746050468_4k0d.jpg" },
-  { name: "Tumbler", price: "$24.99", img: "https://i.etsystatic.com/44229498/r/il/8c2e6c/5698298276/il_680x540.5698298276_jxvp.jpg" },
-  { name: "Sticker Pack", price: "$9.99", img: "https://i.etsystatic.com/44229498/r/il/2e1b5a/5746050472/il_680x540.5746050472_nj04.jpg" },
+  { name: "Study Mug", price: "$18.99", img: studyMug },
+  { name: "Bar Prep Hoodie", price: "$44.99", img: barPrepHoodie },
+  { name: "Notebook", price: "$14.99", img: notebook },
+  { name: "Tote Bag", price: "$22.99", img: toteBag },
+  { name: "Candle", price: "$19.99", img: candle },
+  { name: "Wall Art", price: "$29.99", img: wallArt },
+  { name: "Tumbler", price: "$24.99", img: tumbler },
+  { name: "Sticker Pack", price: "$9.99", img: stickerPack },
 ];
 
 const FeaturedProducts = () => {

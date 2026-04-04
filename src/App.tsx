@@ -10,7 +10,6 @@ import ShopPage from "./pages/ShopPage";
 import GiftCardsPage from "./pages/GiftCardsPage";
 import LoginPage from "./pages/LoginPage";
 import ContactPage from "./pages/ContactPage";
-import RealDisputePage from "./pages/RealDisputePage";
 import ResearchPage from "./pages/ResearchPage";
 import PilotPage from "./pages/PilotPage";
 import SampleReportPage from "./pages/SampleReportPage";
@@ -36,7 +35,6 @@ const App = () => (
           <Route path="/enterprise" element={<Enterprise />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/contact" element={<ContactPage />} />
-          <Route path="/real-dispute" element={<RealDisputePage />} />
           <Route path="/research" element={<ResearchPage />} />
           <Route path="/pilot" element={<PilotPage />} />
           <Route path="/sample-report" element={<SampleReportPage />} />
