@@ -97,6 +97,10 @@ const HeroSection = () => {
             <p className="text-xs text-muted-foreground mt-1">
               Get a free sample instantly • No app required
             </p>
+            <p className="text-[11px] leading-relaxed text-muted-foreground mt-3">
+              By providing your phone number, you agree to receive SMS messages from Love Law.
+              Message frequency may vary. Message & data rates may apply. Reply STOP to opt out.
+            </p>
           </div>
         </div>
 

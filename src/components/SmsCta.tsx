@@ -63,6 +63,10 @@ const SmsCta = () => {
                   <span className="text-accent">LoveLaw</span>
                 </span>
               </p>
+              <p className="text-xs text-muted-foreground mt-3 leading-relaxed">
+                By providing your phone number, you agree to receive SMS messages from Love Law.
+                Message frequency may vary. Message & data rates may apply. Reply STOP to opt out.
+              </p>
             </div>
 
             <div className="flex justify-center lg:justify-start gap-3 flex-wrap">

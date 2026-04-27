@@ -47,6 +47,10 @@ const SmsPage = () => {
             <p className="text-xl font-heading font-bold text-foreground">
               📲 Text <span className="text-accent">LAW</span> to +1 551-368-5683
             </p>
+            <p className="text-xs text-muted-foreground mt-3 leading-relaxed">
+              By providing your phone number, you agree to receive SMS messages from Love Law.
+              Message frequency may vary. Message & data rates may apply. Reply STOP to opt out.
+            </p>
           </div>
         </div>
       </section>
@@ -148,6 +152,10 @@ const SmsPage = () => {
             <a href="sms:+15513685683&body=LAW"><Button variant="hero" size="lg">Join Now</Button></a>
             <a href="sms:+15513685683&body=LAW"><Button variant="gold" size="lg">Get Free Sample</Button></a>
           </div>
+          <p className="text-xs text-muted-foreground mt-4 leading-relaxed">
+            By providing your phone number, you agree to receive SMS messages from Love Law.
+            Message frequency may vary. Message & data rates may apply. Reply STOP to opt out.
+          </p>
         </div>
       </section>
 

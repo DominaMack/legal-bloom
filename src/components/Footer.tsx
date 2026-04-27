@@ -42,6 +42,10 @@ const Footer = () => {
             <p className="text-xs text-muted-foreground mt-2">
               Msg & data rates may apply. Text STOP to cancel. Text HELP for help.
             </p>
+            <p className="text-xs text-muted-foreground mt-2 leading-relaxed">
+              By providing your phone number, you agree to receive SMS messages from Love Law.
+              Message frequency may vary. Message & data rates may apply. Reply STOP to opt out.
+            </p>
           </div>
         </div>
 
