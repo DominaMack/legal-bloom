@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, ShoppingBag } from "lucide-react";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { pickRandomHeroMedia } from "@/lib/hero-media";
 
 const messages = [
   { text: "Don't let imposter syndrome win today.", time: "8:02 AM" },
@@ -12,6 +13,7 @@ const messages = [
 
 const HeroSection = () => {
   const [visibleCount, setVisibleCount] = useState(1);
+  const [heroVideo] = useState(() => pickRandomHeroMedia());
 
   useEffect(() => {
     if (visibleCount >= messages.length) return;
@@ -21,10 +23,27 @@ const HeroSection = () => {
 
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden pt-20 pb-16">
-      {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-secondary/5" />
-      <div className="absolute top-1/3 right-1/4 w-[500px] h-[500px] bg-secondary/5 rounded-full blur-[160px]" />
-      <div className="absolute bottom-1/4 left-1/3 w-[300px] h-[300px] bg-accent/5 rounded-full blur-[120px]" />
+      <div className="absolute inset-0">
+        <video
+          key={heroVideo.id}
+          className="h-full w-full object-cover"
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="metadata"
+          poster={heroVideo.poster}
+        >
+          <source src={heroVideo.src} type="video/mp4" />
+        </video>
+      </div>
+
+      {/* Background overlays */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(250,204,21,0.16),transparent_30%),radial-gradient(circle_at_bottom_left,rgba(59,130,246,0.2),transparent_28%)]" />
+      <div className="absolute inset-0 bg-[linear-gradient(115deg,rgba(255,255,255,0.92)_0%,rgba(255,255,255,0.84)_42%,rgba(255,255,255,0.28)_100%)] dark:bg-[linear-gradient(115deg,rgba(5,10,18,0.9)_0%,rgba(5,10,18,0.72)_45%,rgba(5,10,18,0.45)_100%)]" />
+      <div className="absolute inset-0 bg-gradient-to-b from-background/35 via-background/25 to-background/80 dark:from-background/25 dark:via-background/35 dark:to-background/85" />
+      <div className="absolute top-1/3 right-1/4 h-[500px] w-[500px] rounded-full bg-secondary/10 blur-[160px]" />
+      <div className="absolute bottom-1/4 left-1/3 h-[300px] w-[300px] rounded-full bg-accent/10 blur-[120px]" />
 
       <div className="container mx-auto px-4 grid lg:grid-cols-2 gap-12 lg:gap-8 items-center relative z-10">
         {/* Left */}
@@ -42,6 +61,11 @@ const HeroSection = () => {
           <p className="text-base text-muted-foreground leading-relaxed max-w-md">
             Daily motivation, legal lifestyle products, and support for law students, bar candidates, attorneys, and institutions.
           </p>
+
+          <div className="inline-flex items-center gap-2 rounded-full border border-white/60 bg-white/75 px-3 py-1 text-xs font-medium text-foreground shadow-sm backdrop-blur dark:border-white/10 dark:bg-white/10 dark:text-white/90">
+            <span className="h-2 w-2 rounded-full bg-accent animate-pulse" />
+            Now playing: {heroVideo.title}
+          </div>
 
           <div className="flex flex-wrap gap-3 sm:flex-nowrap sm:items-center">
             <Link to="/sms">
