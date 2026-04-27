@@ -1,6 +1,6 @@
 # Cloudways Deployment Notes
 
-This project should be deployed to Cloudways as a static Vite build.
+This project is deployed to Cloudways as a static Vite build.
 
 ## Recommended flow
 
@@ -9,20 +9,32 @@ This project should be deployed to Cloudways as a static Vite build.
 3. Sync the contents of `dist/` into `public_html/` on Cloudways.
 4. Keep the `.htaccess` file in `public_html/` for SPA routing.
 
+## Current status
+
+Cloudways deployment is active and connected to the `main` branch of the GitHub repository.
+
+Current production target:
+
+- App URL: `https://phpstack-1565321-6328937.cloudwaysapps.com`
+- Server IP: `165.227.185.75`
+- Deploy source: `main`
+- Live directory: `/home/1565321.cloudwaysapps.com/ghkxupcgmk/public_html`
+- Source checkout: `/home/1565321.cloudwaysapps.com/ghkxupcgmk/git_repo`
+
 ## GitHub Actions secrets
 
-Add these repository secrets in GitHub before using the workflow:
+These repository secrets are used by the deploy workflow:
 
 - `CLOUDWAYS_HOST`: `165.227.185.75`
 - `CLOUDWAYS_USER`: `lovelaw`
 - `CLOUDWAYS_TARGET_DIR`: `/home/1565321.cloudwaysapps.com/ghkxupcgmk/public_html`
 - `CLOUDWAYS_PASSWORD`: your Cloudways SSH password for the `lovelaw` user
 
-## One-time setup
+## Ongoing workflow
 
-1. Add the four GitHub repository secrets above.
-2. Push to `main`.
-3. Let the GitHub Actions workflow build and deploy automatically.
+1. Make changes locally.
+2. Commit and push to `main`.
+3. GitHub Actions builds the app and syncs `dist/` to Cloudways automatically.
 
 ## Fallback server commands
 
