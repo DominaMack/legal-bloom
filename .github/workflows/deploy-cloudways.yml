@@ -1,0 +1,48 @@
+name: Deploy To Cloudways
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build app
+        run: npm run build
+
+      - name: Install sshpass
+        run: sudo apt-get update && sudo apt-get install -y sshpass
+
+      - name: Add server to known hosts
+        run: |
+          mkdir -p ~/.ssh
+          ssh-keyscan -H ${{ secrets.CLOUDWAYS_HOST }} >> ~/.ssh/known_hosts
+
+      - name: Sync built files to Cloudways
+        run: |
+          sshpass -p "${{ secrets.CLOUDWAYS_PASSWORD }}" rsync -av --delete dist/ \
+            -e "ssh -o StrictHostKeyChecking=yes" \
+            ${{ secrets.CLOUDWAYS_USER }}@${{ secrets.CLOUDWAYS_HOST }}:${{ secrets.CLOUDWAYS_TARGET_DIR }}/
+
+      - name: Copy SPA rewrite rules
+        run: |
+          sshpass -p "${{ secrets.CLOUDWAYS_PASSWORD }}" scp \
+            -o StrictHostKeyChecking=yes \
+            .htaccess \
+            ${{ secrets.CLOUDWAYS_USER }}@${{ secrets.CLOUDWAYS_HOST }}:${{ secrets.CLOUDWAYS_TARGET_DIR }}/.htaccess
