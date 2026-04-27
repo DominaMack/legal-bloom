@@ -75,7 +75,7 @@ const HeroSection = () => {
             </Link>
             <a href="sms:+15513685683&body=LAW">
               <Button variant="heroOutline" size="lg">
-                Get Free Sample <ArrowRight className="h-4 w-4" />
+                Try a Free Sample <ArrowRight className="h-4 w-4" />
               </Button>
             </a>
             <Link to="/shop">
@@ -85,6 +85,11 @@ const HeroSection = () => {
             </Link>
           </div>
 
+          <p className="text-[11px] leading-relaxed text-muted-foreground max-w-lg">
+            By providing your phone number, you agree to receive SMS messages from Love Law.
+            Message frequency may vary. Message & data rates may apply. Reply STOP to opt out.
+          </p>
+
           {/* SMS Box */}
           <div className="rounded-xl border border-accent/20 bg-accent/5 p-4 max-w-sm">
             <p className="text-foreground font-heading text-base font-bold">
@@ -93,13 +98,10 @@ const HeroSection = () => {
                 <span className="text-foreground">+1 551-</span>
                 <span className="text-accent">LoveLaw</span>
               </span>
+              {" "}for your Daily Dose of Justice™
             </p>
             <p className="text-xs text-muted-foreground mt-1">
-              Get a free sample instantly • No app required
-            </p>
-            <p className="text-[11px] leading-relaxed text-muted-foreground mt-3">
-              By providing your phone number, you agree to receive SMS messages from Love Law.
-              Message frequency may vary. Message & data rates may apply. Reply STOP to opt out.
+              Text STUDENT, BAR, or ATTORNEY to personalize your motivation.
             </p>
           </div>
         </div>
