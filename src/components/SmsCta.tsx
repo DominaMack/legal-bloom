@@ -57,7 +57,11 @@ const SmsCta = () => {
 
             <div className="rounded-xl border border-accent/30 bg-accent/5 p-5 mb-6 glow-gold">
               <p className="text-xl font-heading font-bold text-foreground">
-                📲 Text <span className="text-accent">LAW</span> to +1 717-366-6462
+                📲 Text <span className="text-accent">LAW</span> to{" "}
+                <span className="inline-flex items-center rounded-full border border-accent/30 bg-white/80 px-4 py-1.5 text-[0.95em] font-extrabold tracking-[0.08em] text-foreground shadow-sm">
+                  <span className="text-foreground">+1 551-</span>
+                  <span className="text-accent">LoveLaw</span>
+                </span>
               </p>
             </div>
 
@@ -65,7 +69,7 @@ const SmsCta = () => {
               <Link to="/sms">
                 <Button variant="hero" size="lg">Join Now <ArrowRight className="h-4 w-4" /></Button>
               </Link>
-              <a href="sms:+17173666462&body=LAW">
+              <a href="sms:+15513685683&body=LAW">
                 <Button variant="gold" size="lg">Get Sample Message</Button>
               </a>
             </div>

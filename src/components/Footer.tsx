@@ -37,7 +37,7 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold text-foreground mb-3 font-heading">SMS Motivation</h4>
             <p className="text-sm text-muted-foreground">
-              📲 Text <span className="text-accent font-semibold">LAW</span> to +1 717-366-6462
+              📲 Text <span className="text-accent font-semibold">LAW</span> to +1 551-368-5683
             </p>
             <p className="text-xs text-muted-foreground mt-2">
               Msg & data rates may apply. Text STOP to cancel. Text HELP for help.

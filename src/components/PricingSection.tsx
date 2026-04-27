@@ -129,7 +129,7 @@ const PricingSection = () => {
           </h3>
           <div className="flex flex-wrap justify-center gap-3">
             <Link to="/sms"><Button variant="hero">Join Now</Button></Link>
-            <a href="sms:+17173666462&body=LAW"><Button variant="heroOutline">Get Sample</Button></a>
+            <a href="sms:+15513685683&body=LAW"><Button variant="heroOutline">Get Sample</Button></a>
             <Link to="/shop"><Button variant="outline">Shop</Button></Link>
           </div>
         </div>

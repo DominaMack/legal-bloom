@@ -9,13 +9,13 @@ const SmsTermsPage = () => (
       <div className="prose prose-sm max-w-none text-muted-foreground space-y-6">
         <p>Last updated: {new Date().toLocaleDateString()}</p>
         <h2 className="text-lg font-semibold text-foreground">SMS Program</h2>
-        <p>By texting LAW to +1 717-366-6462, you agree to receive recurring automated motivational text messages from Love Law™.</p>
+        <p>By texting LAW to +1 551-368-5683, you agree to receive recurring automated motivational text messages from Love Law™.</p>
         <h2 className="text-lg font-semibold text-foreground">Message Frequency</h2>
         <p>You will receive up to 1 message per day. Message frequency may vary based on your subscription plan.</p>
         <h2 className="text-lg font-semibold text-foreground">Opt-Out</h2>
         <p>Text <strong>STOP</strong> at any time to unsubscribe. You will receive a one-time confirmation message.</p>
         <h2 className="text-lg font-semibold text-foreground">Help</h2>
-        <p>Text <strong>HELP</strong> for assistance. You can also contact us at <a href="mailto:hello@shoplovelaw.com" className="text-secondary hover:underline">hello@shoplovelaw.com</a> or +1 717-366-6462.</p>
+        <p>Text <strong>HELP</strong> for assistance. You can also contact us at <a href="mailto:hello@shoplovelaw.com" className="text-secondary hover:underline">hello@shoplovelaw.com</a> or +1 551-368-5683.</p>
         <h2 className="text-lg font-semibold text-foreground">Rates</h2>
         <p>Message and data rates may apply. Check your mobile plan for details.</p>
         <h2 className="text-lg font-semibold text-foreground">Privacy</h2>

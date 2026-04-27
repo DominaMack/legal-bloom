@@ -2,14 +2,12 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, ShoppingBag } from "lucide-react";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import iphoneMockup from "@/assets/iphone-mockup.png";
 
 const messages = [
-  { text: "You belong in this profession.", time: "8:01 AM" },
-  { text: "Your future clients need you. Keep going.", time: "8:02 AM" },
-  { text: "Today's effort becomes tomorrow's success.", time: "8:03 AM" },
-  { text: "Bar prep is hard. You are harder.", time: "8:04 AM" },
-  { text: "You didn't come this far to quit.", time: "8:05 AM" },
+  { text: "Don't let imposter syndrome win today.", time: "8:02 AM" },
+  { text: "You've survived 100% of your hardest days.", time: "8:03 AM" },
+  { text: "The bar exam doesn't define you - your persistence does.", time: "8:04 AM" },
+  { text: "You belong in this profession.", time: "8:05 AM" },
 ];
 
 const HeroSection = () => {
@@ -51,7 +49,7 @@ const HeroSection = () => {
                 Join Daily Motivation <ArrowRight className="h-4 w-4" />
               </Button>
             </Link>
-            <a href="sms:+17173666462&body=LAW">
+            <a href="sms:+15513685683&body=LAW">
               <Button variant="heroOutline" size="lg">
                 Get Free Sample <ArrowRight className="h-4 w-4" />
               </Button>
@@ -66,7 +64,11 @@ const HeroSection = () => {
           {/* SMS Box */}
           <div className="rounded-xl border border-accent/20 bg-accent/5 p-4 max-w-sm">
             <p className="text-foreground font-heading text-base font-bold">
-              📲 Text <span className="text-accent">LAW</span> to +1 717-366-6462
+              📲 Text <span className="text-accent">LAW</span> to{" "}
+              <span className="inline-flex items-center rounded-full border border-accent/30 bg-white/80 px-3 py-1 text-[0.95em] font-extrabold tracking-[0.08em] text-foreground shadow-sm">
+                <span className="text-foreground">+1 551-</span>
+                <span className="text-accent">LoveLaw</span>
+              </span>
             </p>
             <p className="text-xs text-muted-foreground mt-1">
               Get a free sample instantly • No app required
@@ -74,47 +76,59 @@ const HeroSection = () => {
           </div>
         </div>
 
-        {/* Right — iPhone with overlay messages */}
+        {/* Right — iPhone-style SMS mockup */}
         <div className="relative flex justify-center animate-slide-in-right">
-          <div className="relative w-[260px] sm:w-[300px]">
-            {/* iPhone image */}
-            <img
-              src={iphoneMockup}
-              alt="Love Law SMS on iPhone"
-              className="w-full h-auto relative z-10"
-              width={512}
-              height={1024}
-            />
-
-            {/* Message overlay on top of phone screen */}
-            <div className="absolute top-[18%] left-[12%] right-[8%] bottom-[22%] z-20 flex flex-col justify-start overflow-hidden rounded-2xl">
-              {/* Screen header */}
-              <div className="bg-card/90 backdrop-blur-sm px-3 py-2 border-b border-border/50">
-                <p className="text-[10px] text-muted-foreground text-center">Messages</p>
-                <p className="text-xs font-semibold text-foreground text-center">Love Law™</p>
-              </div>
-
-              {/* Messages */}
-              <div className="flex-1 bg-background/90 backdrop-blur-sm px-3 py-3 space-y-2.5 overflow-hidden">
-                {messages.slice(0, visibleCount).map((msg, i) => (
-                  <div
-                    key={msg.text}
-                    className="animate-fade-up"
-                    style={{ animationDelay: `${i * 0.1}s` }}
-                  >
-                    <div className="bg-secondary/15 rounded-2xl rounded-tl-sm px-3 py-2 max-w-[92%]">
-                      <p className="text-[11px] text-foreground leading-snug">{msg.text}</p>
-                    </div>
-                    <p className="text-[8px] text-muted-foreground mt-0.5 pl-1">
-                      {msg.time}
-                    </p>
+          <div className="relative w-[290px] sm:w-[350px] lg:w-[390px]">
+            <div className="absolute inset-x-[8%] top-[5%] h-8 rounded-full bg-black/90 blur-sm" />
+            <div className="relative rounded-[2.5rem] border border-white/60 bg-white/90 p-3 shadow-[0_30px_90px_rgba(31,78,173,0.18)] backdrop-blur-xl">
+              <div className="overflow-hidden rounded-[2rem] border border-slate-100 bg-[#fbfbfd]">
+                <div className="flex items-center justify-between px-6 pt-5 text-[11px] font-medium text-slate-400">
+                  <span>9:41</span>
+                  <div className="flex items-center gap-1">
+                    <span className="h-2 w-2 rounded-full bg-slate-300" />
+                    <span className="h-2 w-2 rounded-full bg-slate-300" />
                   </div>
-                ))}
+                </div>
+
+                <div className="border-b border-slate-100 px-6 pb-4 pt-3 text-center">
+                  <p className="text-sm text-slate-400">Messages</p>
+                  <p className="text-[1.65rem] font-heading font-bold leading-none text-slate-800">
+                    Love Law™
+                  </p>
+                </div>
+
+                <div className="space-y-4 bg-white px-5 pb-6 pt-5">
+                  <p className="text-[11px] text-slate-300">Love Law™ • 8:02 AM</p>
+
+                  <div className="space-y-3">
+                    {messages.slice(0, visibleCount).map((msg, i) => (
+                      <div
+                        key={msg.text}
+                        className="animate-fade-up"
+                        style={{ animationDelay: `${i * 0.12}s` }}
+                      >
+                        <div className="rounded-[1.35rem] rounded-tl-md bg-secondary/15 px-4 py-3 shadow-[inset_0_1px_0_rgba(255,255,255,0.65)]">
+                          <p className="text-[15px] leading-[1.35] text-slate-700">{msg.text}</p>
+                        </div>
+                        <p className="mt-1.5 pl-1 text-[11px] text-slate-400">
+                          Love Law™ • {msg.time}
+                        </p>
+                      </div>
+                    ))}
+                  </div>
+
+                  <div className="pt-2">
+                    <div className="rounded-full bg-slate-100 px-4 py-3 text-sm text-slate-300">
+                      iMessage
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
 
-            {/* Glow */}
-            <div className="absolute -inset-8 bg-secondary/8 rounded-full blur-[60px] -z-10" />
+            <div className="absolute -left-10 top-10 h-32 w-32 rounded-full bg-accent/10 blur-3xl" />
+            <div className="absolute -bottom-10 right-0 h-40 w-40 rounded-full bg-secondary/10 blur-3xl" />
+            <div className="absolute inset-x-10 bottom-[-22px] h-12 rounded-full bg-secondary/10 blur-2xl" />
           </div>
         </div>
       </div>

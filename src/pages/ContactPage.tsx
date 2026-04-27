@@ -57,7 +57,7 @@ const ContactPage = () => {
             <div className="space-y-6">
               {[
                 { icon: Mail, label: "Email", value: "hello@shoplovelaw.com", href: "mailto:hello@shoplovelaw.com" },
-                { icon: Phone, label: "Phone", value: "+1 717-366-6462", href: "tel:+17173666462" },
+                { icon: Phone, label: "Phone", value: "+1 551-368-5683", href: "tel:+15513685683" },
                 { icon: Clock, label: "Hours", value: "Mon–Fri, 9am–5pm", href: undefined },
               ].map((item) => (
                 <div key={item.label} className="flex items-center gap-4">

@@ -42,7 +42,7 @@ const HowItWorks = () => {
         </div>
 
         <div className="text-center mt-12">
-          <a href="sms:+17173666462&body=LAW">
+          <a href="sms:+15513685683&body=LAW">
             <Button variant="hero" size="lg">
               Start Your Daily Motivation <ArrowRight className="h-4 w-4" />
             </Button>

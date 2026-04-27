@@ -36,16 +36,16 @@ const SmsPage = () => {
             bar candidates, and attorneys.
           </p>
           <div className="flex flex-wrap justify-center gap-3 mb-8">
-            <a href="sms:+17173666462&body=LAW">
+            <a href="sms:+15513685683&body=LAW">
               <Button variant="hero" size="lg">Join Daily Motivation <ArrowRight className="h-4 w-4" /></Button>
             </a>
-            <a href="sms:+17173666462&body=LAW">
+            <a href="sms:+15513685683&body=LAW">
               <Button variant="heroOutline" size="lg">Get Free Sample</Button>
             </a>
           </div>
           <div className="rounded-2xl border border-accent/30 bg-accent/5 p-6 max-w-sm mx-auto glow-gold">
             <p className="text-xl font-heading font-bold text-foreground">
-              📲 Text <span className="text-accent">LAW</span> to +1 717-366-6462
+              📲 Text <span className="text-accent">LAW</span> to +1 551-368-5683
             </p>
           </div>
         </div>
@@ -59,7 +59,7 @@ const SmsPage = () => {
           </h2>
           <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
             {[
-              { icon: Smartphone, title: "Text LAW", desc: "Send LAW to +1 717-366-6462" },
+              { icon: Smartphone, title: "Text LAW", desc: "Send LAW to +1 551-368-5683" },
               { icon: MessageCircle, title: "Receive Daily Messages", desc: "Motivational texts every morning" },
               { icon: TrendingUp, title: "Stay Consistent", desc: "Build mental resilience daily" },
             ].map((step, i) => (
@@ -145,8 +145,8 @@ const SmsPage = () => {
           </h2>
           <p className="text-muted-foreground mb-8">Join thousands of legal professionals who start their day with Love Law™.</p>
           <div className="flex flex-wrap justify-center gap-3">
-            <a href="sms:+17173666462&body=LAW"><Button variant="hero" size="lg">Join Now</Button></a>
-            <a href="sms:+17173666462&body=LAW"><Button variant="gold" size="lg">Get Free Sample</Button></a>
+            <a href="sms:+15513685683&body=LAW"><Button variant="hero" size="lg">Join Now</Button></a>
+            <a href="sms:+15513685683&body=LAW"><Button variant="gold" size="lg">Get Free Sample</Button></a>
           </div>
         </div>
       </section>

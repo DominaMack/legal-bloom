@@ -35,7 +35,7 @@ const GiftCardsPage = () => {
                 students, bar candidates, and attorneys who deserve daily
                 encouragement.
               </p>
-              <a href="sms:+17173666462&body=LAW">
+              <a href="sms:+15513685683&body=LAW">
                 <Button variant="hero" size="lg">
                   Send a Gift <ArrowRight className="h-4 w-4" />
                 </Button>
@@ -136,7 +136,7 @@ const GiftCardsPage = () => {
             daily encouragement. A Love Law™ gift says "I believe in you" —
             every single day.
           </p>
-          <a href="sms:+17173666462&body=LAW">
+          <a href="sms:+15513685683&body=LAW">
             <Button variant="hero" size="lg">
               Join Daily Motivation <ArrowRight className="h-4 w-4" />
             </Button>
